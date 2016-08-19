@@ -1,0 +1,32 @@
+## Data API Demo Plugin
+---
+package:
+    name: sdk-clients-test
+    description: Widgets for the Data API
+    author: Erik Pearson
+    date: January 12, 2016
+source:
+    modules: []
+    styles: 
+        -
+            file: styles.css
+install:
+    widgets:
+        -
+            module: plugins/sdk-clients-test/modules/test
+            id: kb_sdkclientstest_test
+            type: factory
+    routes:
+        -
+            path:
+                -
+                    sdkclientstest
+            widget: kb_sdkclientstest_test            
+       
+    menu:
+        -
+            name: sdkclientstest
+            definition:
+                path: sdkclientstest
+                label: Data API in SDK Demo
+                icon: database
