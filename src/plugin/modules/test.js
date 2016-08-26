@@ -133,7 +133,7 @@ define([
         
         
         function doTaxonApi(ref) {
-            var client = new GenomeAnnotationAPI({
+            var client = new TaxonAPI({
                 url: runtime.config('services.service_wizard.url'),
                 version: 'dev',
                 auth: {
@@ -141,7 +141,7 @@ define([
                 }
             });
             ui.setContent('taxon-api.data', html.loading());
-            return client.status(ref)
+            return client.get_info(ref)
                 .then(function (data) {
                     ui.setContent('taxon-api.data', div([
                         p({style: {color: 'green'}}, ['Showing output for ' + ref]),
