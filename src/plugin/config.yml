@@ -13,7 +13,7 @@ source:
 install:
     widgets:
         -
-            module: plugins/sdk-clients-test/modules/test
+            module: ./test
             id: kb_sdkclientstest_test
             type: factory
     routes:
